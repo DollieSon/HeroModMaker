@@ -188,4 +188,13 @@ public class ConstantValues {
         }
         return  ArtifactEffects;
     }
+    private static HashMap<String,Integer> ArtifactType;
+    public static HashMap<String,Integer> getArtifactType(){
+        if(ArtifactType == null){
+            ArtifactType = new HashMap<>();
+            ArtifactType.put("Strength",1);
+        ArtifactType.put("Magic",0);
+        }
+        return ArtifactType;
+    }
 }
