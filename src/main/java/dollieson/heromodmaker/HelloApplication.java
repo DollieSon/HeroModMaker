@@ -12,7 +12,7 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("SkillSelector.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
         Parent sc1 = fxmlLoader.load();
         Scene scene = new Scene(sc1,751, 542);
         stage.setTitle("Hello!");

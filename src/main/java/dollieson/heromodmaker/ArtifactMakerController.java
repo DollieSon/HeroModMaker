@@ -1,9 +1,15 @@
 package dollieson.heromodmaker;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -39,6 +45,27 @@ public class ArtifactMakerController implements Initializable {
         cbFBonusEffect.setValue(ConstantValues.getArtifactEffects().iterator().next());
         cbSBonusEffect.getItems().addAll(ConstantValues.getArtifactEffects());
         cbSBonusEffect.setValue(ConstantValues.getArtifactEffects().iterator().next());
+
+        cbFBonusEffect.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                try {
+                    OpenSkillPopUp(cbFBonusEffect);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
+        cbSBonusEffect.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                try {
+                    OpenSkillPopUp(cbSBonusEffect);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
     }
 
     public void onArtifactExport(ActionEvent actionEvent){
@@ -116,4 +143,19 @@ public class ArtifactMakerController implements Initializable {
             System.out.printf("Something went wrong hehe");
         }
     }
+
+    public void OpenSkillPopUp(ChoiceBox cb) throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SkillSelector.fxml"));
+        Parent sc1 = fxmlLoader.load();
+        SkillSelectorController SC = fxmlLoader.getController();
+        SC.setParent(cb);
+        Scene scene = new Scene(sc1,751, 542);
+        stage.setTitle("Select your skill!");
+        stage.setScene(scene);
+        SC.setMe(stage);
+        stage.show();
+
+    }
+
 }
