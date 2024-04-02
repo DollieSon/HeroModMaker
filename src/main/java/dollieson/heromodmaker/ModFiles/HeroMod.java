@@ -1,6 +1,6 @@
 package dollieson.heromodmaker.ModFiles;
 
-public class HeroMod extends ModFile {
+public class HeroMod{
    private String Name;
    // Look Up
    private String Class;

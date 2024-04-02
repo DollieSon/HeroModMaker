@@ -1,6 +1,6 @@
 package dollieson.heromodmaker.ModFiles;
 
-public class HeroClassMod extends ModFile{
+public class HeroClassMod {
     private String Name;
     // Fighter or Caster
     private String Type;

@@ -1,6 +1,6 @@
 package dollieson.heromodmaker.ModFiles;
 
-public class ArtifactMod extends ModFile{
+public class ArtifactMod{
     private String Name;
     private String EquipSlot;
     private String Quality;

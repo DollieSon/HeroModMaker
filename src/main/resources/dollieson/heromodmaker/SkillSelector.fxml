@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dollieson.heromodmaker.SkillSelectorController">
+   <children>
+      <ScrollPane fx:id="SkillContainer" maxHeight="99999.0" maxWidth="1.7976931348623157E308" prefHeight="542.0" prefWidth="578.0" />
+      <Label fx:id="SkillDescription" alignment="TOP_CENTER" prefHeight="542.0" prefWidth="237.0" text="dhgasfjwdkhcsvkdhcjgvwesgdvkjchvfjkdhfvmjzbvmjzdhvj,hrbfkhefbvz,hfvdb,jfhvgfjhgedjhszvbmcnbvnmxcvdjhfgwvljedfgsldyvgdjchvsfjvhwb,jhrsdjhsdgfclwGYflsjhdcvbdjcnvbdlfhjdbfevlehlfjdkgvdjzfhvbdzjfhvbzldhjfgzldefhgvilyfvldjhcvbdjhzfvgjgfwluygefljdhfgskdhjvjae" textAlignment="JUSTIFY" wrapText="true">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </Label>
+   </children>
+</HBox>
